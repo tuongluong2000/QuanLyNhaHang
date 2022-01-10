@@ -29,7 +29,7 @@ namespace QuanLyNhaHang.DAL
             {
                 id = (int)item["id"];
             }
-            
+
             return id;
         }
     }

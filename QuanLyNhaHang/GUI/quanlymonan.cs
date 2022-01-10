@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyNhaHang
+namespace QuanLyNhaHang.GUI
 {
-    public partial class Form1 : Form
+    public partial class quanlymonan : Form
     {
-        public Form1()
+        public quanlymonan()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnthem_Click(object sender, EventArgs e)
         {
 
         }
