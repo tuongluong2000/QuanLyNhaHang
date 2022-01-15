@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyNhaHang.DAL;
+using QuanLyNhaHang.BUS;
 
 namespace QuanLyNhaHang.GUI
 {
@@ -29,20 +30,25 @@ namespace QuanLyNhaHang.GUI
 
         private void buttonDangnhap_Click(object sender, EventArgs e)
         {
-            int id = TaiKhoanDAL.Instance.GetIdByUsernamePwd(textBoxUsername.Text, textBoxPassword.Text);
-
-            if (id != 0)
+            if (TaiKhoanBUS.Instance.checkUsernamePassword(textBoxUsername.Text, textBoxPassword.Text))
             {
-                this.Hide();
-                Form1 form1 = new Form1();
-                form1.ShowDialog();
-                this.Close();
+                int id = TaiKhoanDAL.Instance.GetIdByUsernamePwd(textBoxUsername.Text, textBoxPassword.Text);
+                if (id != 0)
+                {
+                    this.Hide();
+                    Form1 form1 = new Form1();
+                    form1.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Username or Password");
+                }
             }
-            else
-            {
-                MessageBox.Show("Incorrect Username or Password");
-            } 
-                
+            else MessageBox.Show("Không thể bỏ trống");
+
+
+
         }
     }
 }

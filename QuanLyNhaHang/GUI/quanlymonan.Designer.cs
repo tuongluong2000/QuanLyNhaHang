@@ -45,10 +45,12 @@
             // 
             // dgvmonan
             // 
+            this.dgvmonan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvmonan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvmonan.Location = new System.Drawing.Point(2, 2);
+            this.dgvmonan.Location = new System.Drawing.Point(2, 3);
             this.dgvmonan.Name = "dgvmonan";
-            this.dgvmonan.Size = new System.Drawing.Size(240, 150);
+            this.dgvmonan.ReadOnly = true;
+            this.dgvmonan.Size = new System.Drawing.Size(797, 163);
             this.dgvmonan.TabIndex = 0;
             // 
             // btnthem
@@ -106,6 +108,7 @@
             this.txtgia.Name = "txtgia";
             this.txtgia.Size = new System.Drawing.Size(100, 20);
             this.txtgia.TabIndex = 7;
+            this.txtgia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgiaKeypress);
             // 
             // label1
             // 

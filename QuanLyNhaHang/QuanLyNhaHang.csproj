@@ -66,6 +66,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\QuanLyMonAnBUS.cs" />
+    <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\MonAnDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
@@ -123,5 +125,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
