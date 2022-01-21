@@ -35,7 +35,7 @@ namespace QuanLyNhaHang.DAL
     
         public void suamonan(string id, string tenmonan, string motamonan, string gia)
         {
-            string query = "update monan set (" + id + ", '" + tenmonan + "', '" + motamonan + "', " + gia + ") where id = " + id;
+            string query = "update monan set tenmonan = '"+tenmonan+"', motamonan = '"+motamonan+"', gia = "+gia+" where id = " + id;
             int data = DataProvider.Instance.ExecuteNonQuery(query);
         }
         public void xoamonan(string id, string tenmonan, string motamonan, string gia)

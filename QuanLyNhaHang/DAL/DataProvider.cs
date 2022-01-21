@@ -59,7 +59,10 @@ namespace QuanLyNhaHang.DAL
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
             return data;
+            //trả về 1 bảng table, dùng để select, cập nhật dữ liệu lên
         }
+
+
         public int ExecuteNonQuery(string query, object[] param = null)
         {
             int data = 0;
@@ -86,6 +89,8 @@ namespace QuanLyNhaHang.DAL
                 }
 
                 data = command.ExecuteNonQuery();
+                //trả về số dòng bị ảnh hưởng bởi câu lệnh đó
+                //insert , update, delete
 
                 con.Close();
             }
@@ -94,7 +99,8 @@ namespace QuanLyNhaHang.DAL
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
-            return data;
+            return data; 
+            
         }
         public object ExecuteScalar(string query, object[] param = null)
         {

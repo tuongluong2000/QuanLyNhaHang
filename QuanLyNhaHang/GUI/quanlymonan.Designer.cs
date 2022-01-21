@@ -52,6 +52,8 @@
             this.dgvmonan.ReadOnly = true;
             this.dgvmonan.Size = new System.Drawing.Size(797, 163);
             this.dgvmonan.TabIndex = 0;
+            this.dgvmonan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmonan_CellContentClick);
+            this.dgvmonan.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmonan_rowenter);
             // 
             // btnthem
             // 
@@ -71,6 +73,7 @@
             this.btnsua.TabIndex = 2;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnxoa
             // 
@@ -80,6 +83,7 @@
             this.btnxoa.TabIndex = 3;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // txtid
             // 
@@ -165,6 +169,7 @@
             this.Controls.Add(this.dgvmonan);
             this.Name = "quanlymonan";
             this.Text = "quanlymonan";
+            this.Load += new System.EventHandler(this.quanlymonan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvmonan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

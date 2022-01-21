@@ -17,7 +17,7 @@ namespace QuanLyNhaHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new quanlymonan());
+            Application.Run(new dashboardBar());
 
 
 

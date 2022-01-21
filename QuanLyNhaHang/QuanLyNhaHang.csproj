@@ -69,6 +69,7 @@
     <Compile Include="BUS\QuanLyMonAnBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\MonAnDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DTO\MonAnDTO.cs" />
@@ -79,11 +80,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\cthd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\cthd.Designer.cs">
+      <DependentUpon>cthd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\dashboardBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\dashboardBar.Designer.cs">
+      <DependentUpon>dashboardBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\quanlyhoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\quanlyhoadon.Designer.cs">
+      <DependentUpon>quanlyhoadon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\quanlymonan.cs">
       <SubType>Form</SubType>
@@ -96,8 +115,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cthd.resx">
+      <DependentUpon>cthd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\dashboardBar.resx">
+      <DependentUpon>dashboardBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\quanlyhoadon.resx">
+      <DependentUpon>quanlyhoadon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\quanlymonan.resx">
       <DependentUpon>quanlymonan.cs</DependentUpon>

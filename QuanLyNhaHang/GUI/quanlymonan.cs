@@ -65,5 +65,41 @@ namespace QuanLyNhaHang.GUI
                 e.Handled = true;
             }
         }
+
+        private void dgvmonan_rowenter(object sender, DataGridViewCellEventArgs e)
+        {
+            txtid.Text = dgvmonan.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txttenmonan.Text = dgvmonan.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtmota.Text = dgvmonan.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtgia.Text = dgvmonan.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+        }
+
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+            if (QuanLyMonAnBUS.Instance.checktrong(txtid.Text, txttenmonan.Text, txtmota.Text, txtgia.Text))
+            {
+                MonAnDAL.Instance.suamonan(txtid.Text, txttenmonan.Text, txtmota.Text, txtgia.Text);
+                loaddata();
+            }
+            else MessageBox.Show("Không thể bỏ trống");
+        }
+
+        private void btnxoa_Click(object sender, EventArgs e)
+        {
+            MonAnDAL.Instance.xoamonan(txtid.Text, txttenmonan.Text, txtmota.Text, txtgia.Text);
+            loaddata();
+            
+        }
+
+        private void quanlymonan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvmonan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
