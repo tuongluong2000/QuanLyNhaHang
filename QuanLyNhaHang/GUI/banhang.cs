@@ -189,6 +189,10 @@ namespace QuanLyNhaHang.GUI
                 idcthd = ID.ToString();
             }
 
+            MessageBox.Show("thanh toán thành công");
+
+            monanlist.Clear();
+
         }
 
         private void label3_Click(object sender, EventArgs e)
