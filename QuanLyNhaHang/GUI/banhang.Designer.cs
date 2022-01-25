@@ -38,6 +38,8 @@
             this.txttenmon = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtgia = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmonan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nrmonan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvchonmon)).BeginInit();
@@ -82,12 +84,13 @@
             // 
             // btnin
             // 
-            this.btnin.Location = new System.Drawing.Point(519, 360);
+            this.btnin.Location = new System.Drawing.Point(486, 360);
             this.btnin.Name = "btnin";
-            this.btnin.Size = new System.Drawing.Size(55, 23);
+            this.btnin.Size = new System.Drawing.Size(88, 23);
             this.btnin.TabIndex = 4;
-            this.btnin.Text = "In";
+            this.btnin.Text = "Thanh toán";
             this.btnin.UseVisualStyleBackColor = true;
+            this.btnin.Click += new System.EventHandler(this.btnin_Click);
             // 
             // btnxoa
             // 
@@ -113,16 +116,17 @@
             // 
             this.txtid.Location = new System.Drawing.Point(434, 263);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(100, 20);
+            this.txtid.Size = new System.Drawing.Size(39, 20);
             this.txtid.TabIndex = 7;
             this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
             // txttenmon
             // 
-            this.txttenmon.Location = new System.Drawing.Point(642, 260);
+            this.txttenmon.Location = new System.Drawing.Point(564, 267);
             this.txttenmon.Name = "txttenmon";
             this.txttenmon.Size = new System.Drawing.Size(100, 20);
             this.txttenmon.TabIndex = 8;
+            this.txttenmon.Text = "-";
             this.txttenmon.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
@@ -138,17 +142,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(562, 267);
+            this.label2.Location = new System.Drawing.Point(494, 270);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Tên món ăn";
+            // 
+            // txtgia
+            // 
+            this.txtgia.Location = new System.Drawing.Point(699, 263);
+            this.txtgia.Name = "txtgia";
+            this.txtgia.Size = new System.Drawing.Size(68, 20);
+            this.txtgia.TabIndex = 11;
+            this.txtgia.TextChanged += new System.EventHandler(this.txtgia_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(670, 267);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Giá";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // banhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtgia);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txttenmon);
@@ -182,5 +206,7 @@
         private System.Windows.Forms.TextBox txttenmon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtgia;
+        private System.Windows.Forms.Label label3;
     }
 }

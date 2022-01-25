@@ -31,5 +31,32 @@ namespace QuanLyNhaHang.DAL
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+
+        public void themhoadon(string id , string giahoadon, string tennhanvien)
+        {
+            string query = "insert into hoadon values(" + id + ", '" + DateTime.Now + "', " + giahoadon + ", " + tennhanvien + ")";
+            int data = DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        
+        public void themcthd(string id, string idhoadon, string idmonan , string soluong, string gia)
+        {
+            string query = "insert into cthd values(" + id + ", " + idhoadon + ", " + idmonan + ", " + soluong + "," + gia + ")";
+            int data = DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+        public DataTable getmaxid ()
+        {
+            string query = "SELECT MAX(id) Maxid FROM hoadon";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+        public DataTable getmaxidcthd()
+        {
+            string query = "SELECT MAX(id) Maxid FROM cthd";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
     }
 }
