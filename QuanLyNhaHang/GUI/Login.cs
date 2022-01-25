@@ -36,7 +36,7 @@ namespace QuanLyNhaHang.GUI
                 if (id != 0)
                 {
                     this.Hide();
-                    Form1 form1 = new Form1();
+                    dashboardBar form1 = new dashboardBar();
                     form1.ShowDialog();
                     this.Close();
                 }

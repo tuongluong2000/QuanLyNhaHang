@@ -37,7 +37,7 @@ namespace QuanLyNhaHang.GUI
 
         private void btnquanlynhanvien_Click(object sender, EventArgs e)
         {
-            addform(new Login());
+            addform(new banhang());
         }
 
         private void btnquanlyhoadon_Click(object sender, EventArgs e)

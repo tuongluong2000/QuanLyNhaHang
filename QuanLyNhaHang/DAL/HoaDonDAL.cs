@@ -20,14 +20,14 @@ namespace QuanLyNhaHang.DAL
 
         public DataTable gethoadon()
         {
-            string query = "SELECT * FROM `hoadon` ";
+            string query = "SELECT * FROM hoadon ";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
 
         public DataTable getcthd(string idhoadon)
         {
-            string query = "SELECT * FROM 'cthd' WHERE idhoadon = " + idhoadon;
+            string query = "SELECT * FROM cthd WHERE idhoadon = " + idhoadon;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }

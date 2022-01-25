@@ -66,8 +66,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BanHangBUS.cs" />
     <Compile Include="BUS\QuanLyMonAnBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="DAL\BanHangDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\MonAnDAL.cs" />
@@ -79,6 +81,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\banhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\banhang.Designer.cs">
+      <DependentUpon>banhang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\cthd.cs">
       <SubType>Form</SubType>
@@ -114,6 +122,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\banhang.resx">
+      <DependentUpon>banhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\cthd.resx">
       <DependentUpon>cthd.cs</DependentUpon>
