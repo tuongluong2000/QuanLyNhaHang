@@ -165,7 +165,7 @@ namespace QuanLyNhaHang.GUI
                 intongtien = intongtien + int.Parse(tongtien);
             }
 
-            HoaDonDAL.Instance.themhoadon(id, intongtien.ToString(), "admin");
+            HoaDonDAL.Instance.themhoadon(id, intongtien.ToString(), "1");
 
             string idcthd = "";
             DataTable maxidcthd = HoaDonDAL.Instance.getmaxidcthd();
@@ -176,10 +176,17 @@ namespace QuanLyNhaHang.GUI
                 idcthd = ID.ToString();
 
             }
-
+           
             foreach (DataRow rows in monanlist.Rows)
             {
-                string idmonan
+                string idmonan = rows[0].ToString();
+                string soluong = rows[2].ToString();
+                string gia = rows[3].ToString();
+
+                HoaDonDAL.Instance.themcthd(idcthd, id, idmonan, soluong, gia);
+               
+                int ID = int.Parse(idcthd) + 1;
+                idcthd = ID.ToString();
             }
 
         }

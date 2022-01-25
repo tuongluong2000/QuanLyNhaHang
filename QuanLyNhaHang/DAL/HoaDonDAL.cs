@@ -34,7 +34,7 @@ namespace QuanLyNhaHang.DAL
 
         public void themhoadon(string id , string giahoadon, string tennhanvien)
         {
-            string query = "insert into hoadon values(" + id + ", '" + DateTime.Now + "', " + giahoadon + ", " + tennhanvien + ")";
+            string query = "insert into hoadon values(" + id + ", '" + DateTime.Now.ToString() + "', " + giahoadon + ", " + tennhanvien + ")";
             int data = DataProvider.Instance.ExecuteNonQuery(query);
         }
         
